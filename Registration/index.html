@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Registration</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        form { margin: 20px 0; }
+        input, select { margin: 5px 0; padding: 5px; width: 100%; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 8px; text-align: left; border-bottom: 1px solid #ddd; }
+        .section { margin: 15px 0; padding: 15px; border: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+    <h1>User Registration</h1>
+    
+    <form action="/add_user" method="POST">
+        <div class="section">
+            <h3>Enrolled Child's Information</h3>
+            <input type="text" name="First_Name" placeholder="First Name" required>
+            <input type="text" name="Last_Name" placeholder="Last Name" required>
+            <input type="tel" name="phone" placeholder="Phone" required>
+            <input type="email" name="email" placeholder="Best Email for Contact" required>
+            <input type="date" name="date_of_birth" required>
+            <input type="number" name="age" placeholder="Current Age" required>
+            <select name="gender" required>
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="text" name="email" placeholder="Email" required>
+        </div>
+
+        <div class="section">
+            <h3>Parent/Guardian Information</h3>
+            <textarea name="parent_address" placeholder="Parent's Address (if different from above)" required></textarea>
+            <input type="tel" name="parent_phone1" placeholder="Parent's Phone" required>
+            <input type="tel" name="parent_phonework1" placeholder="Parent's Work Phone" required>
+            <input type="text" name="parent_work1" placeholder="Parent's Employer" required>
+            <input type="email" name="parent_email1" placeholder="Parent's Email" required>
+            <h3>Parent/Guardian Information</h3>
+            <textarea name="parent_address2" placeholder="Parent's Address (if different from above)" required></textarea>
+            <input type="tel" name="parent_phone2" placeholder="Parent's Phone" required>
+            <input type="tel" name="parent_phonework2" placeholder="Parent's Work Phone" required>
+            <input type="text" name="parent_work2" placeholder="Parent's Employer" required>
+            <input type="email" name="parent_email2" placeholder="Parent's Email" required>
+        </div>
+
+        <div class="section">
+            <h3>Emergency Contact Information(Other than Parents above)</h3>
+            <textarea name="EContact_address" placeholder="Emergency Contact's Address" required></textarea>
+            <input type="tel" name="EContact_phone" placeholder="Emergency Contact Phone" required>
+            <input type="email" name="EContact_email" placeholder="Emergency Contact Email" required>
+            <h3>Emergency Contact Information(Other than Parents above)</h3>
+            <textarea name="EContact_address2" placeholder="Emergency Contact's Address" required></textarea>
+            <input type="tel" name="EContact_phone2" placeholder="Emergency Contact Phone" required>
+            <input type="email" name="EContact_email2" placeholder="Emergency Contact Email" required>
+        </div>
+
+        <fieldset>
+            <legend>Transportation Plan</legend >
+                <div>
+                <input type="text" name="transportation" placeholder="How will your child be transported to and from the program?" required>
+                <input type="checkbox" id="contactChoice1" name="contact" value="Parent Drop/Off" />
+                </div>
+                <div>
+                <label for="contactChoice1">Parent Drop/Off</label>
+                <input type="checkbox" id="contactChoice2" name="contact" value="Family Member" />
+                </div>
+                <div>
+                <label for="contactChoice2">Family Member</label>
+                <input type="checkbox" id="contactChoice3" name="contact" value="Private Transportation Provided by Parent" />
+                <label for="contactChoice3">Private Transportation Provided by Parent</label>
+                </div>
+        </fieldset>
+
+        <input type="submit" value="Add User" style="background: #4CAF50; color: white; border: none; cursor: pointer;">
+    </form>
+    
+    <div style="margin: 20px 0;">
+        <a href="/save_database" style="padding: 8px 16px; background: #4CAF50; color: white; text-decoration: none; margin-right: 10px;">Save Database</a>
+        <a href="/print_database" style="padding: 8px 16px; background: #2196F3; color: white; text-decoration: none;">Print Database</a>
+    </div>
+
+    <h2>Registered Users</h2>
+    <table>
+        <tr>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Age</th>
+            <th>Gender</th>
+        </tr>
+        {% for user in users %}
+        <tr>
+            <td>{{ user.username }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.age }}</td>
+            <td>{{ user.gender }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
