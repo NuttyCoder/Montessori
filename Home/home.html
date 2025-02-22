@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Little Watsons Montessori</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Welcome to Little Watsons Montessori</h1>
+        <nav class="nav">
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#programs">Programs</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about" class="section">
+        <h2>About Us</h2>
+        <p>Little Watsons Montessori provides a nurturing environment for children to learn and grow. Our experienced teachers and staff are dedicated to the Montessori method, helping children develop independence, creativity, and a love for learning.</p>
+    </section>
+
+    <section id="programs" class="section">
+        <h2>Programs</h2>
+        <div class="programs">
+            <div class="program">
+                <h3>Infant Program</h3>
+                <p>Our infant program focuses on providing a safe and loving environment for your little ones to explore and develop.</p>
+            </div>
+            <div class="program">
+                <h3>Toddler Program</h3>
+                <p>Our toddler program encourages curiosity and exploration through hands-on learning activities and play.</p>
+            </div>
+            <div class="program">
+                <h3>Preschool Program</h3>
+                <p>Our preschool program prepares children for future academic success with a focus on practical life skills, language, and math.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <form action="submit_contact.php" method="post" class="contact-form">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <input type="submit" value="Send Message">
+        </form>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 Little Watsons Montessori. All rights reserved.</p>
+    </footer>
+</body>
+</html>
