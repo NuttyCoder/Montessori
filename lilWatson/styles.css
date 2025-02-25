@@ -1,0 +1,122 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    background-color: #A7A88A;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+}
+
+nav a.logo {
+    margin-right: auto;
+}
+nav li a:hover {
+    background-color: #1c2915;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 1;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav img.logo {
+    height: 30px; /* Adjusted the height for a smaller logo */
+    width: auto; /* Maintain the aspect ratio */
+}
+
+.hero-section {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero-section img  {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero-button {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1c2915;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.hero-button:hover {
+    background-color: #727a6b;
+}
+.main-content img {
+    width: 100%;
+    height: auto;
+    display: block;
+    padding-bottom: 5%;
+    padding-top:5%;
+
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #A7A88A;
+}
+.principles-section {
+    background-color: #727a6b;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.principles-section img {
+    width: 45%;
+    height: auto;
+    display: block;
+}
+
+.principles-section p {
+    float: left ;
+    margin: 20px 0;
+}
+h2 {
+    text-align: center;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+p {
+    margin: 30px;
+
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
