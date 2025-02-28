@@ -28,7 +28,7 @@ h1 {
 
 .animal {
     position: absolute;
-    width: 100px;
+    width: 150px;
     transition: transform 0.3s;
 }
 
@@ -37,8 +37,8 @@ h1 {
 }
 
 #lion {
-    top: 50%;
-    left: 20%;
+    top: 60%;
+    left: 50%;
 }
 
 .nav-buttons button {
