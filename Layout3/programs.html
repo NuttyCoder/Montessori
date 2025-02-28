@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>Nature Montessori Preschool</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Little Watson's Montessori</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#programs">Programs</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1>Nurturing Curious Minds in Nature</h1>
+            <p>Experience the magic of Montessori education where children learn through exploration, discovery, and connection with nature.</p>
+            <button class="cta-button">Learn More</button>
+        </div>
+    </section>
+
+    <!-- Flip Cards Section -->
+    <section id="programs" class="programs">
+        <div class="container">
+            <h2>Discover Our Montessori Approach</h2>
+            <div class="flip-card-grid">
+                <!-- Cards will be inserted here by JavaScript -->
+                 <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <i class="fas fa-leaf"></i>
+                            <h3>Nature Connect</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Montessori Curriculum</h3>
+                            <p>Our curriculum is designed to foster independence, creativity, and a love for learning.</p>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/cardData.js"></script>
+    <script src="js/main.js"></script>
+    <script type="module" src="/src/main.tsx"></script>
+</body>
+</html>
