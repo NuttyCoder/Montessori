@@ -1,0 +1,250 @@
+:root {
+    --primary: #1A5C26;
+    --primary-light: #408E46;
+    --accent: #D68C00;
+    --dark: #222222;
+    --light: #FFFFFF;
+    --mid-grey: #555555;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--light);
+    color: var(--dark);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  h1 {
+    color: var(--primary);
+    margin-bottom: 10px;
+  }
+  
+  .subtitle {
+    margin-bottom: 20px;
+    font-style: italic;
+    color: var(--dark);
+    font-weight: 500;
+  }
+  
+  .container {
+    max-width: 800px;
+    width: 100%;
+  }
+  
+  .insect-selector {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .insect-btn {
+    background-color: var(--light);
+    border: 2px solid var(--primary);
+    border-radius: 5px;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--dark);
+    font-weight: 600;
+  }
+  
+  .insect-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+  }
+  
+  .insect-btn.active {
+    background-color: var(--primary);
+    color: white;
+  }
+  
+  .insect-icon {
+    font-size: 1.5rem;
+  }
+  
+  .stage-display {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    position: relative;
+    height: 150px;
+  }
+  
+  .stage-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+  }
+  
+  .stage-container.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .stage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 22%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0.9;
+    position: relative;
+  }
+  
+  .stage.active {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  
+  .stage-image {
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+    border: 3px solid var(--primary);
+    font-size: 2.5rem;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  }
+  
+  .stage.active .stage-image {
+    border-color: var(--accent);
+    box-shadow: 0 0 10px var(--accent);
+  }
+  
+  .stage-name {
+    font-weight: bold;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--dark);
+  }
+  
+  .progress-bar {
+    height: 8px;
+    background-color: #d0d0d0;
+    border-radius: 4px;
+    margin: 20px 0;
+    position: relative;
+  }
+  
+  .progress-fill {
+    position: absolute;
+    height: 100%;
+    background-color: var(--primary);
+    border-radius: 4px;
+    transition: width 0.5s ease;
+  }
+  
+  .stage-markers {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    position: relative;
+    font-size: 0.8rem;
+    color: var(--dark);
+    font-weight: 600;
+    margin-bottom: 40px;
+  }
+  
+  .stage-marker {
+    position: absolute;
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
+  
+  .info-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+    height: 200px;
+    overflow-y: auto;
+    transition: all 0.5s ease;
+    border: 2px solid var(--primary);
+  }
+  
+  .info-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    color: var(--primary);
+  }
+  
+  .info-emoji {
+    font-size: 1.8rem;
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  
+  button:hover {
+    background-color: var(--primary-light);
+  }
+  
+  button:disabled {
+    background-color: #666666;
+    color: #e0e0e0;
+    cursor: not-allowed;
+  }
+  
+  @media (max-width: 600px) {
+    .insect-selector {
+      flex-wrap: wrap;
+    }
+  
+    .stage-display {
+      height: 200px;
+    }
+  
+    .stage-container {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+  
+    .stage {
+      width: 45%;
+    }
+  }
