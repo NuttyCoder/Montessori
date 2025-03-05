@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Little Watson's Explore!</h1>
+    </header>
+    <div class="container">
+        <h1>Insect Metamorphosis</h1>
+        <p class="subtitle">Complete transformation from egg to adult</p>
+      
+        <div class="insect-selector">
+          <button class="insect-btn active" data-insect="butterfly">
+            <span class="insect-icon">🦋</span>
+            <span>Butterfly</span>
+          </button>
+          <button class="insect-btn" data-insect="bee">
+            <span class="insect-icon">🐝</span>
+            <span>Bee</span>
+          </button>
+          <button class="insect-btn" data-insect="beetle">
+            <span class="insect-icon">🪲</span>
+            <span>Beetle</span>
+          </button>
+          <button class="insect-btn" data-insect="fly">
+            <span class="insect-icon">🪰</span>
+            <span>Fly</span>
+          </button>
+        </div>
+      
+        <div class="stage-display">
+          <div class="stage-container active" id="butterfly-container">
+            <div class="stage" data-stage="0">
+              <div class="stage-image">🥚</div>
+              <div class="stage-name">Egg</div>
+            </div>
+            <div class="stage" data-stage="1">
+              <div class="stage-image">🐛</div>
+              <div class="stage-name">Caterpillar</div>
+            </div>
+            <div class="stage" data-stage="2">
+              <div class="stage-image">🧶</div>
+              <div class="stage-name">Chrysalis</div>
+            </div>
+            <div class="stage" data-stage="3">
+              <div class="stage-image">🦋</div>
+              <div class="stage-name">Adult</div>
+            </div>
+          </div>
+      
+          <div class="stage-container" id="bee-container">
+            <div class="stage" data-stage="0">
+              <div class="stage-image">🥚</div>
+              <div class="stage-name">Egg</div>
+            </div>
+            <div class="stage" data-stage="1">
+              <div class="stage-image">🐛</div>
+              <div class="stage-name">Larva</div>
+            </div>
+            <div class="stage" data-stage="2">
+              <div class="stage-image">🥜</div>
+              <div class="stage-name">Pupa</div>
+            </div>
+            <div class="stage" data-stage="3">
+              <div class="stage-image">🐝</div>
+              <div class="stage-name">Adult</div>
+            </div>
+          </div>
+      
+          <div class="stage-container" id="beetle-container">
+            <div class="stage" data-stage="0">
+              <div class="stage-image">🥚</div>
+              <div class="stage-name">Egg</div>
+            </div>
+            <div class="stage" data-stage="1">
+              <div class="stage-image">🐛</div>
+              <div class="stage-name">Grub</div>
+            </div>
+            <div class="stage" data-stage="2">
+              <div class="stage-image">🌰</div>
+              <div class="stage-name">Pupa</div>
+            </div>
+            <div class="stage" data-stage="3">
+              <div class="stage-image">🪲</div>
+              <div class="stage-name">Adult</div>
+            </div>
+          </div>
+      
+          <div class="stage-container" id="fly-container">
+            <div class="stage" data-stage="0">
+              <div class="stage-image">🥚</div>
+              <div class="stage-name">Egg</div>
+            </div>
+            <div class="stage" data-stage="1">
+              <div class="stage-image">🐛</div>
+              <div class="stage-name">Maggot</div>
+            </div>
+            <div class="stage" data-stage="2">
+              <div class="stage-image">🫘</div>
+              <div class="stage-name">Pupa</div>
+            </div>
+            <div class="stage" data-stage="3">
+              <div class="stage-image">🪰</div>
+              <div class="stage-name">Adult</div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 0%"></div>
+        </div>
+      
+        <div class="stage-markers">
+          <span class="stage-marker" style="left: 0%">Egg</span>
+          <span class="stage-marker" style="left: 33.33%">Larva</span>
+          <span class="stage-marker" style="left: 66.66%">Pupa</span>
+          <span class="stage-marker" style="left: 100%">Adult</span>
+        </div>
+      
+        <div class="info-card" id="info-card">
+          <h2 class="info-title"><span class="info-emoji">🦋</span> Butterfly Metamorphosis</h2>
+          <p>Butterflies undergo complete metamorphosis with four distinct stages: egg, caterpillar (larva), chrysalis (pupa), and adult butterfly.</p>
+          <p>The process begins when a female butterfly lays eggs on a host plant. When the eggs hatch, tiny caterpillars emerge and begin feeding on leaves. Eventually, the caterpillar forms a chrysalis, inside which its body completely transforms. After 10-14 days, an adult butterfly emerges.</p>
+        </div>
+      
+        <div class="controls">
+          <button id="prev-btn" disabled>Previous</button>
+          <button id="next-btn">Next</button>
+        </div>
+      </div>
+    <footer>
+        <p>&copy; 2025 Little Watson's</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html></html>
