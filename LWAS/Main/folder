@@ -1,0 +1,21 @@
+Montessori_Assessment_System/
+│── backend/                # FastAPI-based backend
+│   ├── app/                # Main application logic
+│   │   ├── models.py       # Database models (PostgreSQL)
+│   │   ├── routers/        # API endpoints
+│   │   ├── schemas.py      # Pydantic models for data validation
+│   │   ├── main.py         # FastAPI application entry point
+│   ├── requirements.txt    # Dependencies for Python backend
+│── frontend/               # React Native-based UI
+│   ├── components/         # UI components
+│   │   ├── AssessmentScreen.js  # Student test module
+│   │   ├── ProgressTracker.js   # Gamified progress tracking
+│   │   ├── TeacherDashboard.js  # Teacher-facing data insights
+│   ├── App.js              # Main frontend application entry point
+│   ├── package.json        # Dependencies for React Native
+│── database/               # PostgreSQL database initialization
+│   ├── schema.sql          # DB structure
+│── deployment/             # Cloud infrastructure setup (AWS ECS)
+│   ├── Dockerfile          # Containerization setup
+│   ├── ecs-task-def.json   # AWS ECS task configuration
+│   ├── deployment-guide.md # Instructions for deployment
