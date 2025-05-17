@@ -1,0 +1,12 @@
+{
+  "family": "montessori-assessment",
+  "containerDefinitions": [
+    {
+      "name": "backend",
+      "image": "your-docker-repo/montessori-api",
+      "memory": 512,
+      "cpu": 256,
+      "portMappings": [{"containerPort": 8000}]
+    }
+  ]
+}
